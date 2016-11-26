@@ -10,7 +10,7 @@
 
 %%
 calclist: /* nothing */
-  | calclist exp EOL { printf(" = %d\n", $2); }
+  | calclist exp EOL { printf(" = %d\n> ", $2); }
   | calclist EOL { printf("> "); } /* blank line or a comment */
   ;
 
@@ -33,6 +33,10 @@ term: NUMBER
 
 int main(int argc, char **argv)
 {
+  printf("*******************************************\n");
+  printf("* Calculator Flex&Bison - Grammar Defined *\n");
+  printf("* Little customization by Filosofisto     *\n");
+  printf("*******************************************\n");
   printf("> ");
   yyparse();
 }

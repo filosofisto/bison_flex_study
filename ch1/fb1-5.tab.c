@@ -1341,7 +1341,7 @@ yyreduce:
         case 3:
 /* Line 1792 of yacc.c  */
 #line 13 "fb1-5.y"
-    { printf(" = %d\n", (yyvsp[(2) - (3)])); }
+    { printf(" = %d\n> ", (yyvsp[(2) - (3)])); }
     break;
 
   case 4:
@@ -1631,6 +1631,10 @@ yyreturn:
 
 int main(int argc, char **argv)
 {
+  printf("*******************************************\n");
+  printf("* Calculator Flex&Bison - Grammar Defined *\n");
+  printf("* Little customization by Filosofisto     *\n");
+  printf("*******************************************\n");
   printf("> ");
   yyparse();
 }
